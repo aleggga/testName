@@ -12,7 +12,12 @@ allure
 
 ### Steps to clone execute the tests
 ```
-git clone https://github.com//TestWorkAB
-cd PageObjectModel
+git clone https://github.com/aleggga/testName.git
+cd testName
 mvn clean test
 ```
+
+### Comments
+Actually there are 2 tests:
+UI
+Api
