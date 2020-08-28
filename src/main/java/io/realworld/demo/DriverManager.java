@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TestBase
+public class DriverManager
 {
 	public static WebDriver driver;
 	private static final String CHROME_PROPERTY_NAME = "webdriver.chrome.driver";

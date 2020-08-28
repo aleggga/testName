@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 public class Article
 {
-	WebElement element;
+	final WebElement element;
 
 	Article(WebElement element)
 	{
