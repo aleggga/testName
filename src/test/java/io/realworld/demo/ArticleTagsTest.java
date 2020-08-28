@@ -7,10 +7,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import io.qameta.allure.Description;
 import io.realworld.demo.pages.Article;
 import io.realworld.demo.pages.FilterTag;
 import io.realworld.demo.pages.HomePage;
+import ru.yandex.qatools.allure.annotations.Description;
 
 public class ArticleTagsTest extends TestBase {
 	HomePage homePage = new HomePage(driver);
@@ -41,9 +41,8 @@ public class ArticleTagsTest extends TestBase {
 
 			for (Article article : articles)
 			{
-
+				Assert.assertTrue(article.getTags().contains(tagName));
 			}
-			Assert.assertTrue(articles.stream().anyMatch(article -> article.getTags().contains(tagName)));
 		}
 	}
 

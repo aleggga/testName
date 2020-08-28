@@ -15,13 +15,33 @@ public class Article
 		this.element = element;
 	}
 
-	List<WebElement> tags()
+	private List<WebElement> tagsE()
 	{
 		return element.findElements(By.xpath(".//li[contains(@class,'tag-outline')]"));
 	}
 
+	private WebElement getTitleE()
+	{
+		return element.findElement(By.cssSelector("//a[@class='preview-link']/h1[@class='ng-binding']"));
+	}
+
+	private WebElement getAuthorE()
+	{
+		return element.findElement(By.xpath("//a[@class= 'author ng-binding']"));
+	}
+
 	public List<String> getTags()
 	{
-		return tags().stream().map(el -> el.getText().trim()).collect(Collectors.toList());
+		return tagsE().stream().map(el -> el.getText().trim()).collect(Collectors.toList());
+	}
+
+	public String getTitle()
+	{
+		return getTitleE().getText();
+	}
+
+	public String getAuthor()
+	{
+		return getAuthorE().getText();
 	}
 }

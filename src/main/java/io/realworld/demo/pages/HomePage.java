@@ -11,10 +11,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import io.qameta.allure.Step;
+import io.realworld.demo.HasLogger;
 import io.realworld.demo.TestBase;
+import ru.yandex.qatools.allure.annotations.Step;
 
-public class HomePage extends TestBase
+public class HomePage extends TestBase implements HasLogger
 {
 	// Initializing the Page Objects:
 	public HomePage(WebDriver driver)
@@ -60,10 +61,10 @@ public class HomePage extends TestBase
 		return isFilteredByTag() ? getNavLink().getText() : "";
 	}
 
-	@Step("Filter Articles by [ {tag} ]")
 	public void filterByTag(FilterTag tag)
 	{
 		tag.filterBy();
 		await().until(() -> tag.getName().equals(getTagFilteredBy().trim()));
+		log().info("Filtered articles by tag [ {} ]", tag);
 	}
 }

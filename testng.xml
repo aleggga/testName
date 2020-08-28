@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="demo realworld io Test Automation Test Suite">
+	<test name="demo.realworld.io ui test">
+		<packages>
+			<package name="io.realworld.demo.*"/>
+		</packages>
+	</test>
+</suite>
