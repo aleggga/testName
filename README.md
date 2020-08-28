@@ -18,6 +18,4 @@ mvn clean test
 ```
 
 ### Comments
-Actually there are 2 tests:
-UI
-Api
+Actually there are 2 tests:UI and Api
